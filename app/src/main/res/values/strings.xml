@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">FIASCO</string>
+
+    <string name="hint_email">Email Address</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_confpassword">Confirm Password</string>
+
+    <string name="lbl_login">Login</string>
+    <string name="lbl_register">Register</string>
+    <string name="lbl_forgot_password">Forgot Password?</string>
+
+    <string name="lbl_register_title">
+        In order to better serve you, please take a few moments to complete this form.
+    </string>
+
+    <string name="lbl_user_info">User Information</string>
+    <string name="lbl_account_info">Account Information</string>
+
+    <string name="hint_fname">First Name</string>
+    <string name="hint_lname">Last Name</string>
+    <string name="hint_gender">Gender</string>
+    <string name="hint_male">Male</string>
+    <string name="hint_female">Female</string>
+    <string name="hint_birth_date">Birth Date</string>
+    <string name="hint_contact">Contact Number</string>
+    <string name="hint_city">City</string>
+    <string name="hint_street">Street</string>
+    <string name="hint_zip">Postal Code</string>
+    <string name="hint_height">Height</string>
+    <string name="hint_weight">Weight</string>
+
+    <string name="hint_nav_plans">Training Plans</string>
+    <string name="hint_nav_meal">Meal Plans</string>
+    <string name="hint_nav_schedule">Schedules</string>
+    <string name="hint_nav_reports">Reports</string>
+    <string name="hint_nav_reminder">Reminder</string>
+    <string name="hint_nav_settings">Settings</string>
+    <string name="hint_nav_logout">Log Out</string>
+
+    <string name="hint_open">Open</string>
+    <string name="hint_close">Close</string>
+
+    <string name="snackbar_success_logout">Logged out successfully.</string>
+
+    <string name="snackbar_fail_empty_email">Email Address cannot be blank.</string>
+    <string name="snackbar_fail_empty_password">Password cannot be blank.</string>
+    <string name="snackbar_fail_login_invalid">Invalid email or password.</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

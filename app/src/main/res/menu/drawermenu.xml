@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/plans"
+        android:title="@string/hint_nav_plans"
+        android:icon="@drawable/ic_plans"
+        android:fontFamily="@font/robotolight"/>
+
+    <item
+        android:id="@+id/meal"
+        android:title="@string/hint_nav_meal"
+        android:icon="@drawable/ic_meal"
+        android:fontFamily="@font/robotolight"/>
+
+    <item
+        android:id="@+id/schedules"
+        android:title="@string/hint_nav_schedule"
+        android:icon="@drawable/ic_schedule"
+        android:fontFamily="@font/robotolight"/>
+
+    <item
+        android:id="@+id/reports"
+        android:title="@string/hint_nav_reports"
+        android:icon="@drawable/ic_report"/>
+
+    <item
+        android:id="@+id/reminder"
+        android:title="@string/hint_nav_reminder"
+        android:icon="@drawable/ic_reminder"/>
+
+    <item
+        android:id="@+id/settings"
+        android:title="@string/hint_nav_settings"
+        android:icon="@drawable/ic_settings"/>
+
+    <item
+        android:id="@+id/logout"
+        android:title="@string/hint_nav_logout"
+        android:icon="@drawable/ic_logout"/>
+
+</menu>

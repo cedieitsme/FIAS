@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:padding="10dp"
+    tools:context="com.example.dell.fiasco.RegisterActivity"
+    tools:showIn="@layout/activity_register">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_launcher_login_borderbg">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/register_logo_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:src="@drawable/ic_logo"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/register_desc_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/register_logo_container">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:fontFamily="@font/robotolight"
+                    android:text="@string/lbl_register_title"
+                    android:textSize="17sp"
+                    android:textColor="@color/colorText"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/register_form_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="35dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/register_desc_container">
+
+                <TextView
+                    android:id="@+id/tv_user_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/robotolight"
+                    android:text="@string/lbl_user_info"
+                    android:textSize="17sp"
+                    android:textColor="@color/colorTextTitle"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/register_fname_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:textColorHint="@color/colorText"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/register_et_fname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_name"
+                        android:hint="@string/hint_fname"
+                        android:inputType="text"
+                        android:fontFamily="@font/robotolight"
+                        android:textSize="17sp"
+                        android:textColor="@color/colorText"
+                        app:backgroundTint="@color/colorBorder"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/register_lname_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textColorHint="@color/colorText"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/register_fname_container">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/register_et_lname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_name"
+                        android:hint="@string/hint_lname"
+                        android:inputType="text"
+                        android:fontFamily="@font/robotolight"
+                        android:textSize="17sp"
+                        android:textColor="@color/colorText"
+                        app:backgroundTint="@color/colorBorder"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <RadioGroup
+                    android:id="@+id/rg_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/register_lname_container">
+
+                    <RadioButton
+                        android:id="@+id/radio_male"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rbtn_selector"
+                        android:gravity="center"
+                        android:button="@null"
+                        android:padding="10dp"
+                        android:text="@string/hint_male"
+                        android:textColor="@drawable/rbtn_selector_textcolor"/>
+
+                    <RadioButton
+                        android:id="@+id/radio_female"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/rbtn_selector"
+                        android:gravity="center"
+                        android:button="@null"
+                        android:padding="10dp"
+                        android:text="@string/hint_female"
+                        android:textColor="@drawable/rbtn_selector_textcolor"/>
+
+                </RadioGroup>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/register_birthday_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColorHint="@color/colorText"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/rg_gender">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/register_et_birthday"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="false"
+                        android:drawableRight="@drawable/ic_birthday"
+                        android:hint="@string/hint_birth_date"
+                        android:fontFamily="@font/robotolight"
+                        android:textSize="17sp"
+                        android:textColor="@color/colorText"
+                        app:backgroundTint="@color/colorBorder"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/register_contact_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColorHint="@color/colorText"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/register_birthday_container">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/register_et_contact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_contact"
+                        android:hint="@string/hint_contact"
+                        android:inputType="phone"
+                        android:fontFamily="@font/robotolight"
+                        android:textSize="17sp"
+                        android:textColor="@color/colorText"
+                        app:backgroundTint="@color/colorBorder"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/register_city_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColorHint="@color/colorText"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/register_contact_container">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/register_et_city"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_city"
+                        android:hint="@string/hint_city"
+                        android:fontFamily="@font/robotolight"
+                        android:textSize="17sp"
+                        android:textColor="@color/colorText"
+                        app:backgroundTint="@color/colorBorder"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/register_street_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColorHint="@color/colorText"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/register_city_container">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/register_et_street"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_street"
+                        android:hint="@string/hint_street"
+                        android:fontFamily="@font/robotolight"
+                        android:textSize="17sp"
+                        android:textColor="@color/colorText"
+                        app:backgroundTint="@color/colorBorder"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/register_postal_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColorHint="@color/colorText"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/register_street_container">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/register_et_postal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_postal"
+                        android:hint="@string/hint_zip"
+                        android:fontFamily="@font/robotolight"
+                        android:textSize="17sp"
+                        android:textColor="@color/colorText"
+                        app:backgroundTint="@color/colorBorder"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/register_height_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColorHint="@color/colorText"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/register_postal_container">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/register_et_height"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_height"
+                        android:hint="@string/hint_height"
+                        android:fontFamily="@font/robotolight"
+                        android:textSize="17sp"
+                        android:textColor="@color/colorText"
+                        app:backgroundTint="@color/colorBorder"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/register_weight_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColorHint="@color/colorText"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/register_height_container">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/register_et_weight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_weight"
+                        android:hint="@string/hint_weight"
+                        android:fontFamily="@font/robotolight"
+                        android:textSize="17sp"
+                        android:textColor="@color/colorText"
+                        app:backgroundTint="@color/colorBorder"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/tv_account_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/robotolight"
+                    android:text="@string/lbl_account_info"
+                    android:textSize="17sp"
+                    android:textColor="@color/colorTextTitle"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/register_weight_container"/>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/register_email_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="35dp"
+                    android:textColorHint="@color/colorText"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_account_info">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/register_et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/ic_email"
+                        android:hint="@string/hint_email"
+                        android:inputType="textEmailAddress"
+                        android:fontFamily="@font/robotolight"
+                        android:textSize="17sp"
+                        android:textColor="@color/colorText"
+                        app:backgroundTint="@color/colorBorder"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/register_password_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColorHint="@color/colorText"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/colorBorder"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/register_email_container">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/register_et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_password"
+                        android:inputType="textPassword"
+                        android:fontFamily="@font/robotolight"
+                        android:textSize="17sp"
+                        android:textColor="@color/colorText"
+                        app:backgroundTint="@color/colorBorder"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/register_confpassword_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:textColorHint="@color/colorText"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/colorBorder"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/register_password_container">
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/register_et_confpassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_confpassword"
+                        android:inputType="textPassword"
+                        android:fontFamily="@font/robotolight"
+                        android:textSize="17sp"
+                        android:textColor="@color/colorText"
+                        app:backgroundTint="@color/colorBorder"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

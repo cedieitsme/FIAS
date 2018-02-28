@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FFFFFF</color>
+
+    <color name="colorBackground">#383838</color>
+    <color name="colorSplashBackground">#FFCC00</color>
+    <color name="colorBorder">#FFCC00</color>
+    <color name="colorText">#FFFFFF</color>
+    <color name="colorTextTitle">#FFCC00</color>
+    <color name="colorRadioButton">#FFCC00</color>
+    <color name="colorRadioButtonWhite">#FFFFFF</color>
+    <color name="colorRadioButtonText">#000000</color>
+
+    <color name="colorNavigationDrawer">#FFFFFF</color>
+    <color name="colorNavigationDrawerText">#000000</color>
+
+</resources>
